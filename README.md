@@ -1,16 +1,23 @@
 # FedMSA
 
-### FedBLO code is adopted from FedNest, check the reproduce folder to reproduce the result.
-### FedMCO code is in the jupyter notebook file, fedMCO_stochastic_final.ipynb.
+
 
 
 
 ![alt ](figs/fedMSA-feature.png)
 
 This directory contains source code for evaluating federated bilevel learning with different optimizers on various models and tasks.  In federated bilevel learning, we consider the following nested optimization problem as depicted in Figure 1:
-$$\min_{x \in \mathbb{R}^{d_1}}~f(x)=\frac{1}{m} \sum_{i=1}^{m}~f_{i}(x,y^*(x))$$
 
-$$\text{subj. to  }  y^*(x)\in \text{arg}min_{y\in \mathbb{R}^{d_2}}\frac{1}{m}\sum_{i=1}^{m} g_i(x,y).$$
+The objective is to find the optimal values of ${x}$, ${z}^{1,}$, $\ldots$, ${z}^{N,}$ such that
+\begin{equation}\tag{Fed-MSA}
+\label{fedmsa:prob}
+    \left.\begin{matrix}
+    \hspace{-77pt}\sum_{m=1}^M {\mathbb{P}}^{m}\left(\mathbf{x},\m{z}^{1}, \ldots, \mathbf{z}^{N}\right)=\mathbf{0}, \vspace{4pt}\\ 
+    \sum_{m=1}^M {\mathbb{S}}^{m,n}\left(\mathbf{z}^{n-1},\mathbf{z}^{n}\right)=\mathbf{0}, \forall \ n \in [N].
+    \end{matrix}\right\}
+\end{equation}
+Clearly, $\mb{P} := \sum_{m=1}^M \mathbb{P}^m$ and $\mathbb{S}^n := \sum_{m=1}^M \mathbb{S}^{m,n}$, for all $n \in [N]$.
+
 
 The code was originally developed for the paper
 "Federated Multi-Sequence Stochastic Approximation withLocal Hypergradient Estimation" ([arXiv link](https://arxiv.org/submit/4930672)).
@@ -35,56 +42,16 @@ pytorch>=0.4
 
 # Reproducing Results on FL Benchmark Tasks
 
-## Hyper-Representation Learning
-![alt](figs/fig2.png)
-
-To reproduce the hyper-representation experiments on MNIST dataset, the [**script**](reproduce/fig2.sh) provides the setup. After running this script, use following command to generate the corresponding figure.
->python reproduce/fig2.py
-
-## Loss Function Tuning on Imbalanced Dataset
-![alt](figs/fig31.png)
-Figure 3: Loss function tuning on a 3-layer MLP and imbalanced MNIST dataset to maximize class-balanced test accuracy. The top dashed line is the accuracy on [*non-federated bilevel optimization*](https://openreview.net/pdf?id=ebQXflQre5a), and the bottom dashed line is the accuracy without tuning the loss function.
+## FedBLO 
 
 
-To reproduce the imbalanced learning experiments on MNIST dataset, the [**script**](reproduce/fig3.sh) provides the setup. After running this script, use following command to generate the corresponding figure.
->python reproduce/fig3.py
+## FedBLO: Loss Function Tuning on Imbalanced Dataset
+code is adopted from FedNest, check the reproduce folder to reproduce the result.
 
 
-## Federated Minimax Problem
-![alt](figs/fig4.png)
+## FedMCO 
+ Code is in the jupyter notebook file, fedMCO_stochastic_final.ipynb.
 
-For Figure 4, directly runing the jupyter notebook file [minmax_synthetic.ipynb](minmax_synthetic.ipynb) will generate the result.
-
-
-
-# Customize Run
-
-The hyper-representation experiments are produced by:
-> python [main_hr.py](main_hr.py)
-
-The imbalanced MNIST experiments are produced by:
-> python [main_imbalance.py](main_imbalance.py)
-
-The min-max synthetic experiments are produced in the Jupyter Notebook [minmax_synthetic.ipynb](minmax_synthetic.ipynb)
-
-A simple run example is as following
-> python main_hr.py --iid --epochs 50 --gpu 0 
-
-By control the augments, there can be more configuration. In the paper, the authors mainly discuss four varients of FedNest. Here we provide the corresponding parameters to run each of them:
-
-![alt 4 main algorithms appears in the paper.](figs/fig_algo.png)
-
-- FedNest
-    > --hvp_method global --optim svrg
-- LFedNest
-    > --hvp_method seperate --optim sgd
-- FedNest<sub>SGD</sub>
-    > --hvp_method global --optim sgd
-- LFedNest<sub>SVRG</sub>
-    > --hvp_method seperate --optim svrg
-
-To control the epoch, data distribution (iid or non-iid), inner learning rate, outer learning rate, the arguments are availiable:
-> --epoch [epoch number] --iid [default is non-iid, with argument iid client data is iid] --hlr [outer learning rate] --lr [inner learning rate]
 
 
 More arguments are avaliable in [options.py](utils/options.py). 
