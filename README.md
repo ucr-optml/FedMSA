@@ -5,7 +5,7 @@
 
 
 
-# FedNest : Federated Bilevel, Minimax, and Compositional Optimization
+# FedMSA:Federated Multi-Sequence Stochastic Approximation with\\Local Hypergradient Estimation
 
 ![alt ](figs/fig1.png)
 
