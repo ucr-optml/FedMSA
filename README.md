@@ -23,13 +23,8 @@ The federated code is adopted from FedNest  and [shaoxiongji's](https://github.c
 - The parametric loss tuning experiments on imbalanced dataset follows the loss function design idea of 
 [*AutoBalance: Optimized Loss Functions for Imbalanced Data (Mingchen Li, Xuechen Zhang, Christos Thrampoulidis, Jiasi Chen, Samet Oymak)*](https://openreview.net/pdf?id=ebQXflQre5a), but we only use MNIST in imbalanced loss function design. 
 - The algorithm is also implemented on a (synthetic) federated multilevel stochastic composite optimization problems.  Our example is specifically chosen from the field of risk-averse stochastic optimization, which involves multilevel stochastic composite optimization problems. It can be formulated as follows: 
-- $$\min_{x}{\mathbb{E}[U({x}, \xi)]+\lambda \sqrt{\mathbb{E}[\max(0, U(\m{x},\xi)-\mathbb{E} [U({x},\xi)])^2]}}.$$
-- 
-- 
-- 
-- i.e. the above federated bilevel problem with $g_i(x,y)=-f_i(x,y)$ for all $i \in [m]$, where 
-$$f_i(x,y)=-\frac{1}{2} ||y||^2 -b_i^\top y + y^\top A_i x + \frac{\lambda}{2} ||x||^2.$$
-This is a saddle-point formulation of $\min_{x \in \mathbb{R}^{d_1}} \frac{1}{2} ||\frac{1}{m} \sum_{i\in[m]} A_i x - b_i||^2$. 
+$$\min_{x}{\mathbb{E}[U({x}, \xi)]+\lambda \sqrt{\mathbb{E}[\max(0, U({x},\xi)-\mathbb{E} [U({x},\xi)])^2]}}.$$
+
 
 
 Note: The scripts will be slow without the implementation of parallel computing. 
