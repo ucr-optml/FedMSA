@@ -10,8 +10,7 @@ This directory contains source code for evaluating federated bilevel learning wi
 
 The objective is to find the optimal values of ${x}$, ${z}^{1,}$, $\ldots$, ${z}^{N,}$ such that
 $$\sum_{m=1}^M P^{m}({x},{z}^{1}, \ldots, z^N)=0, \quad \sum_{m=1}^M S^{m,n} (z^{n-1},z^{n})=0, \quad \text{for all}  n \in [N]$$
-Here, $P=\sum_{m=1}^M P^m$ and $S^n:=\sum_{m=1}^M S^{m,n}$, for all $n \in [N]$.
-
+Here, $$P=\sum_{m=1}^M P^m, \qquad S^n:=\sum_{m=1}^M S^{m,n}  \quad \text{for all} \quad  n \in [N]$$.
 
 The code was originally developed for the paper
 "Federated Multi-Sequence Stochastic Approximation withLocal Hypergradient Estimation" ([arXiv link](https://arxiv.org/submit/4930672)).
