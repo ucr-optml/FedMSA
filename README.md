@@ -6,7 +6,7 @@ This is the initial draft, and the code is still under construction.
 
 ![alt ](figs/fedMSA-feature.png)
 
-This directory contains source code for evaluating federated stochastic approximation with multiple coupled sequences (FedMSA) with different optimizers on various models and tasks.  In FedMSA, the objective is to find the optimal values of ${x}$, ${z}^{1,}$, $\ldots$, ${z}^{N,}$ such that
+This directory contains source code for evaluating federated stochastic approximation with multiple coupled sequences (FedMSA) with different optimizers on various models and tasks.  In FedMSA, the objective is to find the optimal values of ${x}$, ${z}^{1}$, $\ldots$, ${z}^{N}$ such that
 $$\sum_{m=1}^M P^{m}({x},{z}^{1}, \ldots, z^N)=0, \quad \sum_{m=1}^M S^{m,n} (z^{n-1},z^{n})=0, \quad \text{for all}  \quad n \in [N].$$
 Here, $M$ denotes the number of clients,  $N$ is the number of copuled seqeunces, $$P=\sum_{m=1}^M P^m, \quad S^n:=\sum_{m=1}^M S^{m,n}  \quad \text{for all} \quad  n \in [N].$$
 
