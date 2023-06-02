@@ -13,15 +13,7 @@ Here, $M$ denotes the number of clients,  $N$ is the number of copuled seqeunces
 FedMSA has found broad applications in machine learning as it encompasses a rich class of problems including bilevel optimization (BLO), multi-level compositional optimization (MCO), and reinforcement learning (specifically, actor-critic methods). The code was originally developed for the paper
 "Federated Multi-Sequence Stochastic Approximation withLocal Hypergradient Estimation" ([arXiv link](https://arxiv.org/submit/4930672)).
  
-The federated code is adopted from [FedNest](https://github.com/ucr-optml/FedNest) and [shaoxiongji's](https://github.com/shaoxiongji/federated-learning). 
  
-- The parametric loss tuning experiments on imbalanced dataset follows the loss function design idea of 
-[*AutoBalance: Optimized Loss Functions for Imbalanced Data (Mingchen Li, Xuechen Zhang, Christos Thrampoulidis, Jiasi Chen, Samet Oymak)*](https://openreview.net/pdf?id=ebQXflQre5a), but we only use MNIST in imbalanced loss function design. This code uses the bilevel implenmentation of 
-[*Optimizing Millions of Hyperparameters by Implicit Differentiation (Jonathan Lorraine, Paul Vicol, David Duvenaud)*](https://arxiv.org/abs/1911.02590)
-- The algorithm is also implemented on a (synthetic) federated multilevel stochastic composite optimization problems.  Our example is specifically chosen from the field of risk-averse stochastic optimization, which involves multilevel stochastic composite optimization problems. It can be formulated as follows: 
-$$\min_{x}{\mathbb{E}[U({x}, \xi)]+\lambda \sqrt{\mathbb{E}[\max(0, U({x},\xi)-\mathbb{E} [U({x},\xi)])^2]}}.$$
-
-
 
 Note: The scripts will be slow without the implementation of parallel computing. 
 
@@ -32,11 +24,19 @@ pytorch>=0.4
 # Reproducing Results on FL Benchmark Tasks
 
 ## FedBLO: Loss Function Tuning on Imbalanced Dataset
-code is adopted from FedNest, check the reproduce folder to reproduce the result.
+- The parametric loss tuning experiments on imbalanced dataset follows the loss function design idea of 
+[*AutoBalance: Optimized Loss Functions for Imbalanced Data (Mingchen Li, Xuechen Zhang, Christos Thrampoulidis, Jiasi Chen, Samet Oymak)*](https://openreview.net/pdf?id=ebQXflQre5a), but we only use MNIST in imbalanced loss function design. This code uses the bilevel implenmentation of 
+[*Optimizing Millions of Hyperparameters by Implicit Differentiation (Jonathan Lorraine, Paul Vicol, David Duvenaud)*](https://arxiv.org/abs/1911.02590)
+
+- Code is adopted from FedNest [FedNest](https://github.com/ucr-optml/FedNest) and [shaoxiongji's](https://github.com/shaoxiongji/federated-learning). Please check the reproduce folder to reproduce the result.
 
 
 ## FedMCO: Federated  Risk-Averse Stochastic Optimization
- Code is in the jupyter notebook file, fedMCO_stochastic_final.ipynb.
+- The algorithm is also implemented on a (synthetic) federated multilevel stochastic composite optimization problems.  Our example is specifically chosen from the field of risk-averse stochastic optimization, which involves multilevel stochastic composite optimization problems. It can be formulated as follows: 
+$$\min_{x}{\mathbb{E}[U({x}, \xi)]+\lambda \sqrt{\mathbb{E}[\max(0, U({x},\xi)-\mathbb{E} [U({x},\xi)])^2]}}.$$
+
+
+- Code is in the jupyter notebook file, fedMCO_stochastic_final.ipynb.
 
 
 
