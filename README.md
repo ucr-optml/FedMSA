@@ -5,8 +5,6 @@
 
 
 
-# FedMSA:Federated Multi-Sequence Stochastic Approximation withLocal Hypergradient Estimation
-
 ![alt ](figs/fedMSA-feature.png)
 
 This directory contains source code for evaluating federated bilevel learning with different optimizers on various models and tasks.  In federated bilevel learning, we consider the following nested optimization problem as depicted in Figure 1:
