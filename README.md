@@ -10,10 +10,10 @@ This directory contains source code for evaluating federated bilevel learning wi
 
 The objective is to find the optimal values of ${x}$, ${z}^{1,}$, $\ldots$, ${z}^{N,}$ such that
 $$
-  \sum_{m=1}^M {\mathbb{P}}^{m}\left({x},{z}^{1}, \ldots, \mathbf{z}^{N}\right)=\mathbf{0}, \text{and}    
-  \sum_{m=1}^M {\mathbb{S}}^{m,n}\left(\mathbf{z}^{n-1},\mathbf{z}^{n}\right)=\mathbf{0}, \forall \ n \in [N].
+  \sum_{m=1}^M P^{m}({x},{z}^{1}, \ldots, {z}^{N}={0}, \text{and}    
+  \sum_{m=1}^M {S}^{m,n} ({z}^{n-1},{z}^{n})={0}, \forall \ n \in [N].
 $$
-Here, $\mathbb{P} := \sum_{m=1}^M \mathbb{P}^m$ and $\mathbb{S}^n := \sum_{m=1}^M \mathbb{S}^{m,n}$, for all $n \in [N]$.
+Here, $\mathbb{P} := \sum_{m=1}^M {P}^m$ and ${S}^n := \sum_{m=1}^M {S}^{m,n}$, for all $n \in [N]$.
 
 
 The code was originally developed for the paper
