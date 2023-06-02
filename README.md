@@ -27,7 +27,7 @@ pytorch>=0.4
 [*AutoBalance: Optimized Loss Functions for Imbalanced Data (Mingchen Li, Xuechen Zhang, Christos Thrampoulidis, Jiasi Chen, Samet Oymak)*](https://openreview.net/pdf?id=ebQXflQre5a), but we only use MNIST in imbalanced loss function design. This code uses the bilevel implenmentation of 
 [*Optimizing Millions of Hyperparameters by Implicit Differentiation (Jonathan Lorraine, Paul Vicol, David Duvenaud)*](https://arxiv.org/abs/1911.02590)
 
-- Code is adopted from FedNest [FedNest](https://github.com/ucr-optml/FedNest). Please check the reproduce folder to reproduce the result.
+- Code is adopted from [FedNest](https://github.com/ucr-optml/FedNest). Please check the reproduce folder to reproduce the result.
 
 
 ## FedMCO: Federated  Risk-Averse Stochastic Optimization
