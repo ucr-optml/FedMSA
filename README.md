@@ -11,7 +11,7 @@ $$\sum_{m=1}^M P^{m}({x},{z}^{1}, \ldots, z^N)=0, \quad \sum_{m=1}^M S^{m,n} (z^
 Here, $M$ denotes the number of clients,  $N$ is the number of copuled seqeunces, $$P=\sum_{m=1}^M P^m, \quad S^n:=\sum_{m=1}^M S^{m,n}  \quad \text{for all} \quad  n \in [N].$$
 
 FedMSA has found broad applications in machine learning as it encompasses a rich class of problems including bilevel optimization (BLO), multi-level compositional optimization (MCO), and reinforcement learning (specifically, actor-critic methods). The code was originally developed for the paper
-"Federated Multi-Sequence Stochastic Approximation withLocal Hypergradient Estimation" ([arXiv link](https://arxiv.org/submit/4930672)).
+"Federated Multi-Sequence Stochastic Approximation with Local Hypergradient Estimation" ([arXiv link](https://arxiv.org/submit/4930672)).
  
  
 
