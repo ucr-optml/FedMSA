@@ -33,14 +33,11 @@ pytorch>=0.4
 
 # Reproducing Results on FL Benchmark Tasks
 
-## FedBLO 
-
-
 ## FedBLO: Loss Function Tuning on Imbalanced Dataset
 code is adopted from FedNest, check the reproduce folder to reproduce the result.
 
 
-## FedMCO 
+## FedMCO: Federated  Risk-Averse Stochastic Optimization
  Code is in the jupyter notebook file, fedMCO_stochastic_final.ipynb.
 
 
