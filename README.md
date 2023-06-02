@@ -39,4 +39,6 @@ $$\min_{x}{\mathbb{E}[U({x}, \xi)]+\lambda \sqrt{\mathbb{E}[\max(0, U({x},\xi)-\
 
 
 
-More arguments are avaliable in [options.py](utils/options.py). This is the initial draft, and the code is still under construction.
+More arguments are avaliable in [options.py](utils/options.py). 
+
+Please note that the provided code is an initial draft and is still a work in progress.
