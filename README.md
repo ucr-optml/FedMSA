@@ -37,7 +37,7 @@ $$\min_{x}{\mathbb{E}[U({x}, \xi)]+\lambda \sqrt{\mathbb{E}[\max(0, U({x},\xi)-\
 
 - Code is in the jupyter notebook file, fedMCO_stochastic_final.ipynb.
 
-
+# 
 
 More arguments are avaliable in [options.py](utils/options.py). 
 
