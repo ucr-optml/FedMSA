@@ -7,7 +7,7 @@
 
 # FedMSA:Federated Multi-Sequence Stochastic Approximation withLocal Hypergradient Estimation
 
-![alt ](figs/fig1.png)
+![alt ](figs/fedMSA-feature.png)
 
 This directory contains source code for evaluating federated bilevel learning with different optimizers on various models and tasks.  In federated bilevel learning, we consider the following nested optimization problem as depicted in Figure 1:
 $$\min_{x \in \mathbb{R}^{d_1}}~f(x)=\frac{1}{m} \sum_{i=1}^{m}~f_{i}(x,y^*(x))$$
