@@ -15,7 +15,7 @@ Here, $$P=\sum_{m=1}^M P^m, \quad S^n:=\sum_{m=1}^M S^{m,n}  \quad \text{for all
 The code was originally developed for the paper
 "Federated Multi-Sequence Stochastic Approximation withLocal Hypergradient Estimation" ([arXiv link](https://arxiv.org/submit/4930672)).
  
-The federated code is adopted from FedNest  and [shaoxiongji's](https://github.com/shaoxiongji/federated-learning) implenmentation under MIT license. %The code is organized as follows:
+The federated code is adopted from [FedNest](https://github.com/ucr-optml/FedNest) and [shaoxiongji's](https://github.com/shaoxiongji/federated-learning). 
 
 
 - The bilevel implenmentation follows the algorithm of 
