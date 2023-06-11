@@ -38,8 +38,7 @@ python figure_q.py
 python figure_tau.py
 ```
 
-[run_blo_10clients.py](reproduce/run_blo_10clients.py) train the model under FedMSA and [run_fednest](reproduce/run_fednest.py) use the FedNest original code and parameters to run the baseline results. Based on FedNest, we mainly change [core.Client](core/Client.py), add [core.ClientManage_blo](core/ClientManage_blo.py) and [main_imbalance_blo](./main_imbalance_blo.py).
-
+The training process for the model under FedMSA can be executed by running the script [run_blo_10clients.py](reproduce/run_blo_10clients.py). On the other hand, the baseline results can be reproduced using the original code and parameters from FedNest by running the script [run_fednest](reproduce/run_fednest.py). In order to adapt FedNest, we made specific modifications to the  [core.Client](core/Client.py) file, incorporating [core.ClientManage_blo](core/ClientManage_blo.py) and [main_imbalance_blo](./main_imbalance_blo.py).
 
 ## FedMCO: Federated  Risk-Averse Stochastic Optimization
 - The algorithm is also implemented on a (synthetic) federated multilevel stochastic composite optimization problems.  Our example is specifically chosen from the field of risk-averse stochastic optimization, which involves multilevel stochastic composite optimization problems. It can be formulated as follows: 
