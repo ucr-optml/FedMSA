@@ -45,7 +45,7 @@ The training process for the model under FedMSA can be executed by running the s
 $$\min_{x}{\mathbb{E}[U({x}, \xi)]+\lambda \sqrt{\mathbb{E}[\max(0, U({x},\xi)-\mathbb{E} [U({x},\xi)])^2]}}.$$
 
 
-- Code is in the jupyter notebook file, fedMCO_stochastic_final.ipynb.
+- Code is in the jupyter notebook file, [fedMCO_stochastic_final.ipynb](https://github.com/ucr-optml/FedMSA/blob/main/fedMCO_stochastic_final.ipynb).
 
 # 
 
